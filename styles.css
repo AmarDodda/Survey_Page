@@ -1,0 +1,65 @@
+* {
+    margin: 0; /* Resetting margin for all elements */
+  }
+  .mb-3 {
+    margin-bottom: 20px; /* Adjust the margin bottom as needed */
+  }
+
+  /* Internal CSS for reducing the size of text boxes */
+  .form-control-sm {
+    height: 30px;
+    padding: 3px 6px;
+    font-size: 14px;
+    line-height: 1.5;
+    border-radius: 4px;
+  }
+  .rating {
+    float: left;
+    border: none;
+  }
+  .rating:not(:checked) > input {
+    position: absolute;
+    top: -9999px;
+    clip: rect(0, 0, 0, 0);
+  }
+  .rating:not(:checked) > label {
+    float: right;
+    width: 1em;
+    padding: 0 0.1em;
+    overflow: hidden;
+    white-space: nowrap;
+    cursor: pointer;
+    font-size: 200%;
+    line-height: 1.2;
+    color: #ddd;
+  }
+  .rating:not(:checked) > label:before {
+    content: "★ ";
+  }
+  .rating > input:checked ~ label {
+    color: #f70;
+  }
+  .rating:not(:checked) > label:hover,
+  .rating:not(:checked) > label:hover ~ label {
+    color: gold;
+  }
+  .rating > input:checked + label:hover,
+  .rating > input:checked + label:hover ~ label,
+  .rating > input:checked ~ label:hover,
+  .rating > input:checked ~ label:hover ~ label,
+  .rating > label:hover ~ input:checked ~ label {
+    color: #ea0;
+  }
+  .rating > label:active {
+    position: relative;
+  }
+  .grey-bg {
+    background-color: #f0f0f0; /* Grey background color for even rows */
+  }
+  td {
+    width: 14%;
+    text-align: center;
+  }
+  textarea{
+    width: 100%;
+  }
